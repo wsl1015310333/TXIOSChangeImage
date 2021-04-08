@@ -48,6 +48,14 @@
                                     <action selector="zoom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5pt-a8-Bdf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4B-Ir-Ad1">
+                                <rect key="frame" x="230" y="395" width="51" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="left_rotate_normal"/>
+                                <connections>
+                                    <action selector="rorate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sWA-V0-Yz2"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMm-hh-hR3">
                                 <rect key="frame" x="70" y="386" width="51" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -77,6 +85,11 @@
                                     <action selector="zoom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3LD-KA-Ef3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLm-pn-FQF">
+                                <rect key="frame" x="305" y="395" width="51" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="right_rotate_normal"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -95,9 +108,11 @@
         <image name="btn_01" width="100" height="100"/>
         <image name="btn_02" width="100" height="100"/>
         <image name="left_normal" width="96" height="96"/>
+        <image name="left_rotate_normal" width="96" height="96"/>
         <image name="minus_normal" width="96" height="96"/>
         <image name="plus_normal" width="96" height="96"/>
         <image name="right_normal" width="96" height="96"/>
+        <image name="right_rotate_normal" width="96" height="96"/>
         <image name="top_normal" width="96" height="96"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
