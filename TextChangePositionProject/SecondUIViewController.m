@@ -8,6 +8,7 @@
 #import "SecondUIViewController.h"
 
 @interface SecondUIViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *headImageView;
 
 @end
 
@@ -16,6 +17,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    UIButton *btn=[[UIButton alloc] init];
+    btn.frame =CGRectMake(20, 20, 100, 100);
+//    btn.backgroundColor=[UIColor redColor];
+    [btn setTitle:@"点我" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    UIImage *image =[UIImage imageNamed:@"btn_01"];
+
+    [btn setBackgroundImage:image forState:UIControlStateNormal];
+    [btn setBackgroundImage:[UIImage imageNamed:@"btn_02"] forState:UIControlStateHighlighted];
+
+    [self.view addSubview:btn];
+    
+    [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+    //按钮的监听方法
+   // [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
+}
+-(void)click:(id)sender{
+    NSLog(@"就点你");
 }
 
 /*

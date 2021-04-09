@@ -17,6 +17,7 @@
 		16AB7595261DDB5A00624A01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AB7594261DDB5A00624A01 /* main.m */; };
 		16AB759F261DDB5A00624A01 /* TextChangePositionProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AB759E261DDB5A00624A01 /* TextChangePositionProjectTests.m */; };
 		16AB75AA261DDB5A00624A01 /* TextChangePositionProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16AB75A9261DDB5A00624A01 /* TextChangePositionProjectUITests.m */; };
+		16ADF045261F3F3600FA8E42 /* PickeSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16ADF044261F3F3600FA8E42 /* PickeSelectViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		16AB75A5261DDB5A00624A01 /* TextChangePositionProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextChangePositionProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16AB75A9261DDB5A00624A01 /* TextChangePositionProjectUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextChangePositionProjectUITests.m; sourceTree = "<group>"; };
 		16AB75AB261DDB5A00624A01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16ADF043261F3F3600FA8E42 /* PickeSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PickeSelectViewController.h; sourceTree = "<group>"; };
+		16ADF044261F3F3600FA8E42 /* PickeSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickeSelectViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				16AB7594261DDB5A00624A01 /* main.m */,
 				1694F3B1261EDF5D007DF53E /* SecondUIViewController.h */,
 				1694F3B2261EDF5D007DF53E /* SecondUIViewController.m */,
+				16ADF043261F3F3600FA8E42 /* PickeSelectViewController.h */,
+				16ADF044261F3F3600FA8E42 /* PickeSelectViewController.m */,
 			);
 			path = TextChangePositionProject;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				16AB7584261DDB5900624A01 /* AppDelegate.m in Sources */,
 				16AB7595261DDB5A00624A01 /* main.m in Sources */,
 				16AB7587261DDB5900624A01 /* SceneDelegate.m in Sources */,
+				16ADF045261F3F3600FA8E42 /* PickeSelectViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
