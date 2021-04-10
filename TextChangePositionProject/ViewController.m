@@ -16,7 +16,7 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UIButton *headImageView;
 @property (nonatomic, assign) int delta;
 @end
-
+//
 @implementation ViewController
 //- (IBAction)left:(id)sender {
 
