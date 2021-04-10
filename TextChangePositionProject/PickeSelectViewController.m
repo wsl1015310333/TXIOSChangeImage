@@ -36,6 +36,79 @@ typedef enum {
 @end
 
 @implementation PickeSelectViewController
+  
+-(UILabel*)noLabel{
+    if(!_noLabel){
+         _noLabel=[[UILabel alloc] initWithFrame:CGRectMake(0, 30, self.view.frame.size.width, 40)];
+     //                                               label.text=@"1/5";
+        _noLabel.textAlignment=NSTextAlignmentCenter;
+        [self.view addSubview:_noLabel];
+     }
+  
+    
+    return _noLabel;
+}
+- (UILabel *)descLabel{
+    if(!_descLabel){
+        _descLabel=[[UILabel alloc] initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 80)];
+    //    label1.text=@"神马表情都假的";
+        _descLabel.textAlignment=NSTextAlignmentCenter;
+        [self.view addSubview:_descLabel];
+       // self.descLabel=label1;
+    }
+    return _descLabel;
+}
+- (UIButton *)leftButton{
+    if(!_leftButton){
+        _leftButton=[[UIButton alloc] init];
+    //    leftBtn.backgroundColor=[UIColor redColor];
+        [_leftButton setBackgroundImage:[UIImage imageNamed:@"left_normal"] forState: UIControlStateNormal];
+        [_leftButton setBackgroundImage:[UIImage imageNamed:@"left_highlighted"] forState: UIControlStateHighlighted];
+        
+        _leftButton.frame=CGRectMake(0, 0, 40, 40);
+        _leftButton.center=CGPointMake(self.icon.frame.origin.x/2,self.icon.center.y);
+        [self.view addSubview:_leftButton];
+        [_leftButton addTarget:self action:@selector(leftClick) forControlEvents:(UIControlEventTouchUpInside)];
+        
+     //   self.leftButton=leftBtn;
+    }
+    return _leftButton;
+}
+- (UIButton *)rightButton{
+    if(!_rightButton){
+        _rightButton=[[UIButton alloc] init];
+    //    rightBtn.backgroundColor=[UIColor redColor];
+        [_rightButton setBackgroundImage:[UIImage imageNamed:@"right_normal"] forState: UIControlStateNormal];
+        [_rightButton setBackgroundImage:[UIImage imageNamed:@"right_highlighted"] forState: UIControlStateHighlighted];
+        _rightButton.frame=CGRectMake(0, 0, 40, 40);
+        _rightButton.center=CGPointMake(self.view.frame.size.width- self.icon.frame.origin.x/2,self.icon.center.y);
+        [self.view addSubview:_rightButton];
+        [_rightButton addTarget:self action:@selector(rightClick) forControlEvents:(UIControlEventTouchUpInside)];
+       // self.rightButton=rightBtn;
+        
+      
+        [self changeImageView];
+    }
+    return _rightButton;
+}
+- (UIImageView *)icon{
+    if(!_icon){
+        CGFloat imageW=200;
+        CGFloat imageX=(self.view.frame.size.width-imageW)/2;
+        CGFloat imaegH=200;
+        CGFloat imageY=80;
+        _icon=[[UIImageView alloc]initWithFrame:CGRectMake(imageX, imageY, imageW, imaegH)];
+        
+        //实力化一个图像
+    //    UIImage *image=[UIImage imageNamed:@"biaoqingdi"];
+    //    //
+    //    imageView.image=image;
+        
+        [self.view addSubview:_icon];
+      //  self.icon=imageView;
+    }
+    return _icon;
+}
 - (NSArray *)imageArray
 {
     NSLog(@"获取数据内容");
@@ -49,6 +122,7 @@ typedef enum {
         //File 表示从文件的完整路径加载文件
         //Bundle包，只读
         NSString *path=[[NSBundle mainBundle]pathForResource:@"ImageData" ofType:@"plist"];
+    
         NSLog(@"%@",path);
         _imageArray=[NSArray arrayWithContentsOfFile:path];
         
@@ -59,60 +133,59 @@ typedef enum {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //序号标签
-    UILabel *label=[[UILabel alloc] initWithFrame:CGRectMake(0, 30, self.view.frame.size.width, 40)];
- //                                               label.text=@"1/5";
-    label.textAlignment=NSTextAlignmentCenter;
-    [self.view addSubview:label];
-    self.noLabel=label;
+//    UILabel *label=[[UILabel alloc] initWithFrame:CGRectMake(0, 30, self.view.frame.size.width, 40)];
+// //                                               label.text=@"1/5";
+//    label.textAlignment=NSTextAlignmentCenter;
+//    [self.view addSubview:label];
+//    self.noLabel=label;
     
     //2 图片试图
-    CGFloat imageW=200;
-    CGFloat imageX=(self.view.frame.size.width-imageW)/2;
-    CGFloat imaegH=200;
-    CGFloat imageY=80;
-    UIImageView *imageView=[[UIImageView alloc]initWithFrame:CGRectMake(imageX, imageY, imageW, imaegH)];
-    
-    //实力化一个图像
-//    UIImage *image=[UIImage imageNamed:@"biaoqingdi"];
-//    //
-//    imageView.image=image;
-    
-    [self.view addSubview:imageView];
-    self.icon=imageView;
+//    CGFloat imageW=200;
+//    CGFloat imageX=(self.view.frame.size.width-imageW)/2;
+//    CGFloat imaegH=200;
+//    CGFloat imageY=80;
+//    UIImageView *imageView=[[UIImageView alloc]initWithFrame:CGRectMake(imageX, imageY, imageW, imaegH)];
+//
+//    //实力化一个图像
+////    UIImage *image=[UIImage imageNamed:@"biaoqingdi"];
+////    //
+////    imageView.image=image;
+//
+//    [self.view addSubview:imageView];
+//    self.icon=imageView;
     //3 描述标签
-    UILabel *label1=[[UILabel alloc] initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 80)];
-//    label1.text=@"神马表情都假的";
-    label.numberOfLines=0//1单行 0多行
-    label1.textAlignment=NSTextAlignmentCenter;
-    [self.view addSubview:label1];
-    self.descLabel=label1;
+//    UILabel *label1=[[UILabel alloc] initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 80)];
+////    label1.text=@"神马表情都假的";
+//    label1.textAlignment=NSTextAlignmentCenter;
+//    [self.view addSubview:label1];
+//    self.descLabel=label1;
     //4 左边按钮
-    UIButton *leftBtn=[[UIButton alloc] init];
-//    leftBtn.backgroundColor=[UIColor redColor];
-    [leftBtn setBackgroundImage:[UIImage imageNamed:@"left_normal"] forState: UIControlStateNormal];
-    [leftBtn setBackgroundImage:[UIImage imageNamed:@"left_highlighted"] forState: UIControlStateHighlighted];
-    
-    leftBtn.frame=CGRectMake(0, 0, 40, 40);
-    leftBtn.center=CGPointMake(self.icon.frame.origin.x/2,self.icon.center.y);
-    [self.view addSubview:leftBtn];
-    [leftBtn addTarget:self action:@selector(leftClick) forControlEvents:(UIControlEventTouchUpInside)];
-    
-    self.leftButton=leftBtn;
+//    UIButton *leftBtn=[[UIButton alloc] init];
+////    leftBtn.backgroundColor=[UIColor redColor];
+//    [leftBtn setBackgroundImage:[UIImage imageNamed:@"left_normal"] forState: UIControlStateNormal];
+//    [leftBtn setBackgroundImage:[UIImage imageNamed:@"left_highlighted"] forState: UIControlStateHighlighted];
+//
+//    leftBtn.frame=CGRectMake(0, 0, 40, 40);
+//    leftBtn.center=CGPointMake(self.icon.frame.origin.x/2,self.icon.center.y);
+//    [self.view addSubview:leftBtn];
+//    [leftBtn addTarget:self action:@selector(leftClick) forControlEvents:(UIControlEventTouchUpInside)];
+//
+//    self.leftButton=leftBtn;
     
     //右侧按钮
     
     //5右边
-    UIButton *rightBtn=[[UIButton alloc] init];
-//    rightBtn.backgroundColor=[UIColor redColor];
-    [rightBtn setBackgroundImage:[UIImage imageNamed:@"right_normal"] forState: UIControlStateNormal];
-    [rightBtn setBackgroundImage:[UIImage imageNamed:@"right_highlighted"] forState: UIControlStateHighlighted];
-    rightBtn.frame=CGRectMake(0, 0, 40, 40);
-    rightBtn.center=CGPointMake(self.view.frame.size.width- self.icon.frame.origin.x/2,self.icon.center.y);
-    [self.view addSubview:rightBtn];
-    [rightBtn addTarget:self action:@selector(rightClick) forControlEvents:(UIControlEventTouchUpInside)];
-    self.rightButton=rightBtn;
-    
-  
+//    UIButton *rightBtn=[[UIButton alloc] init];
+////    rightBtn.backgroundColor=[UIColor redColor];
+//    [rightBtn setBackgroundImage:[UIImage imageNamed:@"right_normal"] forState: UIControlStateNormal];
+//    [rightBtn setBackgroundImage:[UIImage imageNamed:@"right_highlighted"] forState: UIControlStateHighlighted];
+//    rightBtn.frame=CGRectMake(0, 0, 40, 40);
+//    rightBtn.center=CGPointMake(self.view.frame.size.width- self.icon.frame.origin.x/2,self.icon.center.y);
+//    [self.view addSubview:rightBtn];
+//    [rightBtn addTarget:self action:@selector(rightClick) forControlEvents:(UIControlEventTouchUpInside)];
+//    self.rightButton=rightBtn;
+//
+//
     [self changeImageView];
     
 }
@@ -152,7 +225,8 @@ typedef enum {
     
     
     
-    self.noLabel.text=[NSString stringWithFormat:@"%d/%d",self.index+1,5 ];
+   // self.noLabel.text=[NSString stringWithFormat:@"%d/%d",self.index+1,5 ];
+    [self.noLabel setText:[NSString stringWithFormat:@"%d/%d",self.index+1,5 ]];
 //    switch (self.index) {
 //        case ZERO:
 //            self.icon.image=[UIImage imageNamed:@"biaoqingdi"];
