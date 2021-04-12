@@ -28,7 +28,11 @@
                                             <rect key="frame" x="325" y="9" width="60" height="35"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="下载" backgroundImage="buttongreen"/>
+                                            <state key="disabled" title="已下载"/>
                                             <state key="highlighted" backgroundImage="buttongreen_highlighted"/>
+                                            <connections>
+                                                <action selector="downloadBtnOnclick:" destination="pCy-25-iQW" eventType="touchUpInside" id="ZQ0-5w-Iwg"/>
+                                            </connections>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ukT-pQ-Ayp">
                                             <rect key="frame" x="36" y="7" width="43" height="43"/>
@@ -51,7 +55,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="downloadBtn" destination="KHt-kB-bLb" id="ZqX-Zw-KT0"/>
+                                    <outlet property="downloadBtn" destination="KHt-kB-bLb" id="tZ6-Ls-QFK"/>
                                     <outlet property="iconView" destination="ukT-pQ-Ayp" id="ScH-ae-eAZ"/>
                                     <outlet property="introLabel" destination="iwC-wd-10H" id="Kgr-Up-B6u"/>
                                     <outlet property="nameLabel" destination="IM9-1U-tVE" id="BDZ-3X-hhJ"/>
