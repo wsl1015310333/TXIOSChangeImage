@@ -983,6 +983,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		160482442623D6EA000EDF9E /* weibo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = weibo;
+			sourceTree = "<group>";
+		};
+		160482452623D6F2000EDF9E /* qq */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = qq;
+			sourceTree = "<group>";
+		};
 		161E406626214DB700599945 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -1544,6 +1558,8 @@
 		16AB7581261DDB5900624A01 /* TextChangePositionProject */ = {
 			isa = PBXGroup;
 			children = (
+				160482452623D6F2000EDF9E /* qq */,
+				160482442623D6EA000EDF9E /* weibo */,
 				161E406626214DB700599945 /* Animations */,
 				16075B9D2620558A003336A8 /* tom.plist */,
 				16AB7582261DDB5900624A01 /* AppDelegate.h */,
