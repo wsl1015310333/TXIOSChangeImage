@@ -7,7 +7,7 @@
 
 #import <UIKit/UIKit.h>
 @class NJApp,NJAppCell;
-@protocol MJAppCellDelegate <NSObject>
+@protocol MJAppCellDelegate <NSObject>//可以当成接口
 @optional
 -(void) appCellDidClickedDownloadBtn:(NJAppCell *)cell;
 @end
