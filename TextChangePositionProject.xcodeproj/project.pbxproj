@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1604824A2623DE1F000EDF9E /* apps_full.plist in Resources */ = {isa = PBXBuildFile; fileRef = 160482492623DE1F000EDF9E /* apps_full.plist */; };
+		160482502623DE4B000EDF9E /* NJApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1604824F2623DE4B000EDF9E /* NJApp.m */; };
+		160482562623E08A000EDF9E /* NJViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 160482552623E08A000EDF9E /* NJViewController.m */; };
+		1604825C2623F4CD000EDF9E /* NJAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1604825B2623F4CD000EDF9E /* NJAppCell.m */; };
 		16075B9026204053003336A8 /* ImageData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16075B8F26204053003336A8 /* ImageData.plist */; };
 		16075B9926204FA7003336A8 /* TomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16075B9826204FA7003336A8 /* TomViewController.m */; };
 		16075B9E2620558A003336A8 /* tom.plist in Resources */ = {isa = PBXBuildFile; fileRef = 16075B9D2620558A003336A8 /* tom.plist */; };
@@ -485,6 +489,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		160482492623DE1F000EDF9E /* apps_full.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = apps_full.plist; sourceTree = "<group>"; };
+		1604824E2623DE4A000EDF9E /* NJApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJApp.h; sourceTree = "<group>"; };
+		1604824F2623DE4B000EDF9E /* NJApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJApp.m; sourceTree = "<group>"; };
+		160482542623E08A000EDF9E /* NJViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJViewController.h; sourceTree = "<group>"; };
+		160482552623E08A000EDF9E /* NJViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJViewController.m; sourceTree = "<group>"; };
+		1604825A2623F4CD000EDF9E /* NJAppCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NJAppCell.h; sourceTree = "<group>"; };
+		1604825B2623F4CD000EDF9E /* NJAppCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NJAppCell.m; sourceTree = "<group>"; };
 		16075B8F26204053003336A8 /* ImageData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ImageData.plist; sourceTree = "<group>"; };
 		16075B9726204FA7003336A8 /* TomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TomViewController.h; sourceTree = "<group>"; };
 		16075B9826204FA7003336A8 /* TomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TomViewController.m; sourceTree = "<group>"; };
@@ -995,6 +1006,20 @@
 			children = (
 			);
 			path = qq;
+			sourceTree = "<group>";
+		};
+		160482462623DD25000EDF9E /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				1604824E2623DE4A000EDF9E /* NJApp.h */,
+				1604824F2623DE4B000EDF9E /* NJApp.m */,
+				160482492623DE1F000EDF9E /* apps_full.plist */,
+				160482542623E08A000EDF9E /* NJViewController.h */,
+				160482552623E08A000EDF9E /* NJViewController.m */,
+				1604825A2623F4CD000EDF9E /* NJAppCell.h */,
+				1604825B2623F4CD000EDF9E /* NJAppCell.m */,
+			);
+			path = manager;
 			sourceTree = "<group>";
 		};
 		161E406626214DB700599945 /* Animations */ = {
@@ -1558,6 +1583,7 @@
 		16AB7581261DDB5900624A01 /* TextChangePositionProject */ = {
 			isa = PBXGroup;
 			children = (
+				160482462623DD25000EDF9E /* manager */,
 				160482452623D6F2000EDF9E /* qq */,
 				160482442623D6EA000EDF9E /* weibo */,
 				161E406626214DB700599945 /* Animations */,
@@ -2009,6 +2035,7 @@
 				161E437D26214DBA00599945 /* angry_13.jpg in Resources */,
 				161E430F26214DBA00599945 /* eat_30.jpg in Resources */,
 				161E439426214DBA00599945 /* cymbal_06.jpg in Resources */,
+				1604824A2623DE1F000EDF9E /* apps_full.plist in Resources */,
 				161E425326214DBA00599945 /* knockout_07.jpg in Resources */,
 				161E43CF26214DBA00599945 /* drink_61.jpg in Resources */,
 				161E42F226214DBA00599945 /* footLeft_19.jpg in Resources */,
@@ -2178,6 +2205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				160482502623DE4B000EDF9E /* NJApp.m in Sources */,
 				16AB758A261DDB5900624A01 /* ViewController.m in Sources */,
 				1694F3B3261EDF5D007DF53E /* SecondUIViewController.m in Sources */,
 				16AB7584261DDB5900624A01 /* AppDelegate.m in Sources */,
@@ -2185,7 +2213,9 @@
 				161E43ED2621527300599945 /* NineCellViewController.m in Sources */,
 				16AB7587261DDB5900624A01 /* SceneDelegate.m in Sources */,
 				16075B9926204FA7003336A8 /* TomViewController.m in Sources */,
+				160482562623E08A000EDF9E /* NJViewController.m in Sources */,
 				16ADF045261F3F3600FA8E42 /* PickeSelectViewController.m in Sources */,
+				1604825C2623F4CD000EDF9E /* NJAppCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
